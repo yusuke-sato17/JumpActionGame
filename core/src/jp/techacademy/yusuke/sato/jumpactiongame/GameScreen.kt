@@ -7,6 +7,8 @@ import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.graphics.g2d.TextureRegion
 import com.badlogic.gdx.utils.viewport.FitViewport
+import com.badlogic.gdx.math.Rectangle
+import com.badlogic.gdx.math.Vector3
 import com.badlogic.gdx.graphics.OrthographicCamera
 import java.util.*
 import kotlin.collections.ArrayList
@@ -36,6 +38,8 @@ class GameScreen(private val mGame: JumpActionGame) : ScreenAdapter() {
     private lateinit var mPlayer: Player
 
     private var mGameState: Int
+    private var mHeightSoFar: Float = 0f
+    private var mTouchPoint: Vector3
 
     init {
         val bgTexture = Texture("back.png")
@@ -51,6 +55,7 @@ class GameScreen(private val mGame: JumpActionGame) : ScreenAdapter() {
         mSteps= ArrayList<Step>()
         mStars= ArrayList<Star>()
         mGameState = GAME_STATE_READY
+        mTouchPoint = Vector3()
 
         createStage()
     }
@@ -122,14 +127,53 @@ class GameScreen(private val mGame: JumpActionGame) : ScreenAdapter() {
     private fun update(delta: Float) {
         when (mGameState) {
             GAME_STATE_READY ->
-                return
+                updateReady()
             GAME_STATE_PLAYING ->
-                return
+                updatePlaying(delta)
             GAME_STATE_GAMEOVER ->
-                return
+                updateGameOver()
         }
     }
+
+    private fun updateReady() {
+        if (Gdx.input.justTouched()) {
+            mGameState = GAME_STATE_PLAYING
+        }
+    }
+
+    private fun updatePlaying(delta: Float) {
+        var accel = 0f
+        if (Gdx.input.isTouched) {
+            mViewPort.unproject(mTouchPoint.set(Gdx.input.x.toFloat(), Gdx.input.y.toFloat(), 0f))
+            val left = Rectangle(0f, 0f, CAMERA_WIDTH / 2, CAMERA_HEIGHT)
+            val right = Rectangle(CAMERA_WIDTH / 2, 0f, CAMERA_WIDTH / 2, CAMERA_HEIGHT)
+            if (left.contains(mTouchPoint.x, mTouchPoint.y)) {
+                accel = 5.0f
+            }
+            if (right.contains(mTouchPoint.x, mTouchPoint.y)) {
+                accel = -5.0f
+            }
+        }
+
+        for (i in 0 until mSteps.size) {
+            mSteps[i].update(delta)
+        }
+
+        if (mPlayer.y <= 0.5f) {
+            mPlayer.hitStep()
+        }
+        mPlayer.update(delta, accel)
+        mHeightSoFar = Math.max(mPlayer.y, mHeightSoFar)
+    }
+
+    private fun updateGameOver() {
+
+    }
 }
+
+
+
+
 
 
 
