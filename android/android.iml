@@ -26,7 +26,7 @@
         <compilerSettings />
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/build/tmp/kotlin-classes/debug" />
-          <option name="classpath" value="$MODULE_DIR$/../core/build/libs/core-1.0.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.9.11/8f4d287c534460323bdf4da1cf18e0b88af3089b/gdx-backend-android-1.9.11.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.71/d9717625bb3c731561251f8dd2c67a1011d6764c/kotlin-stdlib-1.2.71.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.11/69fe46897eed6f92e3f01b75cc7ca5f860881a8b/gdx-1.9.11.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.71/ba18ca1aa0e40eb6f1865b324af2f4cbb691c1ec/kotlin-stdlib-common-1.2.71.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/a98-202004008/Library/Android/sdk/platforms/android-29/android.jar" />
+          <option name="classpath" value="$MODULE_DIR$/../core/build/libs/core-1.0.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.9.11/8f4d287c534460323bdf4da1cf18e0b88af3089b/gdx-backend-android-1.9.11.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.71/d9717625bb3c731561251f8dd2c67a1011d6764c/kotlin-stdlib-1.2.71.jar:/Users/a98-202004008/.gradle/caches/transforms-2/files-2.1/72dbe172acf1629b39fc28833b76b610/jars/classes.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.9.11/69fe46897eed6f92e3f01b75cc7ca5f860881a8b/gdx-1.9.11.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.2.71/ba18ca1aa0e40eb6f1865b324af2f4cbb691c1ec/kotlin-stdlib-common-1.2.71.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/a98-202004008/.gradle/caches/transforms-2/files-2.1/377bd3b7af7a3607f086d7115bf1dd17/jars/classes.jar:/Users/a98-202004008/.gradle/caches/transforms-2/files-2.1/377bd3b7af7a3607f086d7115bf1dd17/jars/libs/internal_impl-21.0.0.jar:/Users/a98-202004008/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/21.0.0/1a578b9607b36266c63d43a4fa0ab5664dbe911e/support-annotations-21.0.0.jar:/Users/a98-202004008/Library/Android/sdk/platforms/android-29/android.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="android_debug" />
@@ -113,6 +113,9 @@
     <orderEntry type="library" name="Gradle: com.badlogicgames.gdx:gdx:1.9.11@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.2.71@jar" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-annotations:21.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services:6.5.87@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.android.support:support-v4:21.0.0@aar" level="project" />
     <orderEntry type="module" module-name="core" />
   </component>
 </module>
