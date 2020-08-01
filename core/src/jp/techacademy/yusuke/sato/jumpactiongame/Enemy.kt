@@ -10,4 +10,8 @@ class Enemy(texture: Texture, srcX: Int, srcY: Int, srcWidth: Int, srcHeight: In
         val ENEMY_WIDTH = 0.8f
         val ENEMY_HEIGHT = 0.8f
     }
+
+    init {
+        setSize(ENEMY_WIDTH, ENEMY_HEIGHT)
+    }
 }

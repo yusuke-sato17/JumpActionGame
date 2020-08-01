@@ -117,5 +117,6 @@
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services:6.5.87@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-v4:21.0.0@aar" level="project" />
     <orderEntry type="module" module-name="core" />
+    <orderEntry type="library" name="Gradle: android-android-29" level="project" />
   </component>
 </module>
